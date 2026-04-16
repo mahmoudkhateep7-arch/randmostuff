@@ -5,7 +5,6 @@ import { AppState } from './store';
 import { YouTubeEmbed } from '@next/third-parties/google'
 import './style.css'
 import Image from 'next/image';
-import pic from '../public/channels4_profile.jpg'
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faArrowRightArrowLeft, faDeleteLeft, faPlus, faX } from '@fortawesome/free-solid-svg-icons';
@@ -151,11 +150,12 @@ export default function HomePage() {
 
 
   const thumnails = [
-    'https://i.ytimg.com/an_webp/y26PTZXuEe8/mqdefault_6s.webp?du=3000&sqp=CImQgs8G&rs=AOn4CLDn4BxhXkeXVkfiNv_GX501RlNCcA',
-    'https://i.ytimg.com/an_webp/chkdCIcFkO0/mqdefault_6s.webp?du=3000&sqp=CLacgs8G&rs=AOn4CLA44Hir4-boD0VB2klal9CzyiD4RA',
-    'https://i.ytimg.com/an_webp/KzUmoedBmZ4/mqdefault_6s.webp?du=3000&sqp=CO6bgs8G&rs=AOn4CLDg9gDNUHW4Eke8J1lRSxENVPZ08w',
     'https://i.ytimg.com/vi/-ZVOwqJpuBY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBsFi-jdiPheo5ZJ2J1ElZL08fikw',
-    'https://i.ytimg.com/an_webp/bniLuSI-3Gw/mqdefault_6s.webp?du=3000&sqp=CJSvg88G&rs=AOn4CLDlxOMIJGcxrEMbNN1jPxFKkFzaLg'
+    'https://i.ytimg.com/an_webp/bniLuSI-3Gw/mqdefault_6s.webp?du=3000&sqp=CJSvg88G&rs=AOn4CLDlxOMIJGcxrEMbNN1jPxFKkFzaLg',
+    'https://i.ytimg.com/an_webp/QON71m6rUBs/mqdefault_6s.webp?du=3000&sqp=CPyzg88G&rs=AOn4CLAD8XF2l6_t-9h0MOSadxfKU9IyLA',
+    'https://i.ytimg.com/vi/rF0YgEMlu7k/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAGKHl9fjpulrkkedLfqbmQrd1xvQ',
+    'https://i.ytimg.com/vi/PyonpkeiBQE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC4UZwX3X07X1UL8LA8isUrronWfg',
+    'https://i.ytimg.com/vi/5KMY8qZXmBA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCuNHGVGEJOF_BSXaY64p9-SEo_IA'
 
 
   ]
@@ -193,8 +193,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className={`w-70 flex justify-center flex-1  max-[900px]:w-full`}>
-                <Image className={`rounded-full w-75 h-75`} alt={'me image'} width={300} height={200} src={pic} ></Image>
+              <div className={`w-70   flex justify-center flex-1  max-[900px]:w-full`}>
+                <Image className={`rounded-full w-75 lg:hover:rounded-none duration-300 transition-all h-75`} alt={'me image'} width={300} height={200} src={'https://i.ytimg.com/vi/chkdCIcFkO0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB8kz20az1SqMH_vpKS2nKkv1OZlA'} ></Image>
               </div>
 
             </div>
@@ -404,7 +404,7 @@ export default function HomePage() {
               </div>
 
               {/* next */}
-              <div onClick={() => { if (imgNumber - 1 < thumnails.length - 1) { setImgNumber((p) => { return p + 1 }); setDir('ltr') } }} className={`flex items-center gap-2 ${imgNumber == thumnails.length ? 'bg-gray-500' : 'bg-white'} rounded-[0px_20px_20px_0px] p-2 max-[700px]:text-[14px] text-xl cursor-pointer`}>
+              <div onClick={() => { if (imgNumber - 1 < thumnails.length - 1) { setImgNumber((p) => { return p + 1 }); setDir('ltr') } }} className={`flex items-center gap-2 ${imgNumber == thumnails.length ? 'bg-gray-500' : 'bg-white'} rounded-[0px_20px_20px_0px] p-2 max-[700px]:text-[14px] max-[450px]:gap-0 text-xl cursor-pointer`}>
 
                 <span>Next</span>
 
