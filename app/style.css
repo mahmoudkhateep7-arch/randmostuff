@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+
+#ltr {
+  animation: rtll 1s ease-in-out 1;
+
+}
+
+@keyframes rtll {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+
+    border-radius: 20px;
+  }
+}
+
+#rtl {
+  animation: dd 1s ease-in-out 1;
+
+}
+
+@keyframes dd {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+
+    border-radius: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+#ani {
+  color: greenyellow;
+  animation: aaaa 1 forwards;
+}
+
+@keyframes aaaa {
+  0% {
+    top: -3vh;
+  }
+
+  100% {
+    top: 120vh;
+  }
+
+
+}
